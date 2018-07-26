@@ -1,0 +1,13 @@
+version: '3'
+services:
+  development:
+    build: .
+    command: /usr/bin/sudo /usr/sbin/sshd -D
+    ports:
+      - "2236:22"
+      - "8100:8100"
+      - "35729:35729"
+      - "53703:53703"
+    volumes:
+      - .:/var/www
+
