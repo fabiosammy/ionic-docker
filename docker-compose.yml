@@ -10,4 +10,5 @@ services:
       - "53703:53703"
     volumes:
       - .:/var/www
+      - ./devel:/home/devel
 
