@@ -8,7 +8,8 @@ services:
       - "8100:8100"
       - "35729:35729"
       - "53703:53703"
+    privileged: true
     volumes:
-      - .:/var/www
-      - ./devel:/home/devel
-
+      - "/dev/bus/usb:/dev/bus/usb"
+      - ./apps:/var/www
+      - ./.home-devel:/home/devel
